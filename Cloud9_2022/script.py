@@ -1,0 +1,2 @@
+pkg_list=com.databricks:spark-avro_2.11:4.0.0,org.apache.hadoop:hadoop-aws:2.7.1
+pyspark --packages $pkg_list --executor-memory 39g --num-executors 29 --executor-cores 5 --conf "spark.hadoop.mapreduce.fileoutputcommitter.algorithm.version=2"

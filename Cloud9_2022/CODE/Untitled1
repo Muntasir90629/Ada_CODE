@@ -1,0 +1,662 @@
+muntasirul.hoque@ada-asia.com:~/environment $ pkg_list=com.databricks:spark-avro_2.11:4.0.0,org.apache.hadoop:hadoop-aws:2.7.1
+muntasirul.hoque@ada-asia.com:~/environment $ pyspark --packages $pkg_list --executor-memory 39g --num-executors 29 --executor-cores 5 --conf "spark.hadoop.mapreduce.fileoutputcommitter.algorithm.version=2"
+Python 3.6.3 |Anaconda, Inc.| (default, Oct 13 2017, 12:02:49) 
+[GCC 7.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+Ivy Default Cache set to: /home/ec2-user/.ivy2/cache
+The jars for the packages stored in: /home/ec2-user/.ivy2/jars
+:: loading settings :: url = jar:file:/home/ec2-user/anaconda3/lib/python3.6/site-packages/pyspark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+com.databricks#spark-avro_2.11 added as a dependency
+org.apache.hadoop#hadoop-aws added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-66edf56f-b9b4-49cc-86f4-6be81b9b16a5;1.0
+        confs: [default]
+        found com.databricks#spark-avro_2.11;4.0.0 in central
+        found org.slf4j#slf4j-api;1.7.5 in central
+        found org.apache.avro#avro;1.7.6 in central
+        found org.codehaus.jackson#jackson-core-asl;1.9.13 in central
+        found org.codehaus.jackson#jackson-mapper-asl;1.9.13 in central
+        found com.thoughtworks.paranamer#paranamer;2.3 in central
+        found org.xerial.snappy#snappy-java;1.0.5 in central
+        found org.apache.commons#commons-compress;1.4.1 in central
+        found org.tukaani#xz;1.0 in central
+        found org.apache.hadoop#hadoop-aws;2.7.1 in central
+        found org.apache.hadoop#hadoop-common;2.7.1 in central
+        found org.apache.hadoop#hadoop-annotations;2.7.1 in central
+        found com.google.guava#guava;11.0.2 in central
+        found com.google.code.findbugs#jsr305;3.0.0 in central
+        found commons-cli#commons-cli;1.2 in central
+        found org.apache.commons#commons-math3;3.1.1 in central
+        found xmlenc#xmlenc;0.52 in central
+        found commons-httpclient#commons-httpclient;3.1 in central
+        found commons-logging#commons-logging;1.1.3 in central
+        found commons-codec#commons-codec;1.4 in central
+        found commons-io#commons-io;2.4 in central
+        found commons-net#commons-net;3.1 in central
+        found commons-collections#commons-collections;3.2.1 in central
+        found javax.servlet#servlet-api;2.5 in central
+        found org.mortbay.jetty#jetty;6.1.26 in central
+        found org.mortbay.jetty#jetty-util;6.1.26 in central
+        found com.sun.jersey#jersey-core;1.9 in central
+        found com.sun.jersey#jersey-json;1.9 in central
+        found org.codehaus.jettison#jettison;1.1 in central
+        found com.sun.xml.bind#jaxb-impl;2.2.3-1 in central
+        found javax.xml.bind#jaxb-api;2.2.2 in central
+        found javax.xml.stream#stax-api;1.0-2 in central
+        found javax.activation#activation;1.1 in central
+        found org.codehaus.jackson#jackson-jaxrs;1.9.13 in central
+        found org.codehaus.jackson#jackson-xc;1.9.13 in central
+        found com.sun.jersey#jersey-server;1.9 in central
+        found asm#asm;3.2 in central
+        found log4j#log4j;1.2.17 in central
+        found net.java.dev.jets3t#jets3t;0.9.0 in central
+        found org.apache.httpcomponents#httpclient;4.2.5 in central
+        found org.apache.httpcomponents#httpcore;4.2.5 in central
+        found com.jamesmurty.utils#java-xmlbuilder;0.4 in central
+        found commons-lang#commons-lang;2.6 in central
+        found commons-configuration#commons-configuration;1.6 in central
+        found commons-digester#commons-digester;1.8 in central
+        found commons-beanutils#commons-beanutils;1.7.0 in central
+        found commons-beanutils#commons-beanutils-core;1.8.0 in central
+        found org.slf4j#slf4j-api;1.7.10 in central
+        found com.google.protobuf#protobuf-java;2.5.0 in central
+        found com.google.code.gson#gson;2.2.4 in central
+        found org.apache.hadoop#hadoop-auth;2.7.1 in central
+        found org.apache.directory.server#apacheds-kerberos-codec;2.0.0-M15 in central
+        found org.apache.directory.server#apacheds-i18n;2.0.0-M15 in central
+        found org.apache.directory.api#api-asn1-api;1.0.0-M20 in central
+        found org.apache.directory.api#api-util;1.0.0-M20 in central
+        found org.apache.zookeeper#zookeeper;3.4.6 in central
+        found org.slf4j#slf4j-log4j12;1.7.10 in central
+        found io.netty#netty;3.6.2.Final in central
+        found org.apache.curator#curator-framework;2.7.1 in central
+        found org.apache.curator#curator-client;2.7.1 in central
+        found com.jcraft#jsch;0.1.42 in central
+        found org.apache.curator#curator-recipes;2.7.1 in central
+        found org.apache.htrace#htrace-core;3.1.0-incubating in central
+        found javax.servlet.jsp#jsp-api;2.1 in central
+        found jline#jline;0.9.94 in central
+        found junit#junit;4.11 in central
+        found org.hamcrest#hamcrest-core;1.3 in central
+        found com.fasterxml.jackson.core#jackson-databind;2.2.3 in central
+        found com.fasterxml.jackson.core#jackson-annotations;2.2.3 in central
+        found com.fasterxml.jackson.core#jackson-core;2.2.3 in central
+        found com.amazonaws#aws-java-sdk;1.7.4 in central
+        found joda-time#joda-time;2.10.13 in central
+        [2.10.13] joda-time#joda-time;[2.2,)
+:: resolution report :: resolve 2005ms :: artifacts dl 46ms
+        :: modules in use:
+        asm#asm;3.2 from central in [default]
+        com.amazonaws#aws-java-sdk;1.7.4 from central in [default]
+        com.databricks#spark-avro_2.11;4.0.0 from central in [default]
+        com.fasterxml.jackson.core#jackson-annotations;2.2.3 from central in [default]
+        com.fasterxml.jackson.core#jackson-core;2.2.3 from central in [default]
+        com.fasterxml.jackson.core#jackson-databind;2.2.3 from central in [default]
+        com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+        com.google.code.gson#gson;2.2.4 from central in [default]
+        com.google.guava#guava;11.0.2 from central in [default]
+        com.google.protobuf#protobuf-java;2.5.0 from central in [default]
+        com.jamesmurty.utils#java-xmlbuilder;0.4 from central in [default]
+        com.jcraft#jsch;0.1.42 from central in [default]
+        com.sun.jersey#jersey-core;1.9 from central in [default]
+        com.sun.jersey#jersey-json;1.9 from central in [default]
+        com.sun.jersey#jersey-server;1.9 from central in [default]
+        com.sun.xml.bind#jaxb-impl;2.2.3-1 from central in [default]
+        com.thoughtworks.paranamer#paranamer;2.3 from central in [default]
+        commons-beanutils#commons-beanutils;1.7.0 from central in [default]
+        commons-beanutils#commons-beanutils-core;1.8.0 from central in [default]
+        commons-cli#commons-cli;1.2 from central in [default]
+        commons-codec#commons-codec;1.4 from central in [default]
+        commons-collections#commons-collections;3.2.1 from central in [default]
+        commons-configuration#commons-configuration;1.6 from central in [default]
+        commons-digester#commons-digester;1.8 from central in [default]
+        commons-httpclient#commons-httpclient;3.1 from central in [default]
+        commons-io#commons-io;2.4 from central in [default]
+        commons-lang#commons-lang;2.6 from central in [default]
+        commons-logging#commons-logging;1.1.3 from central in [default]
+        commons-net#commons-net;3.1 from central in [default]
+        io.netty#netty;3.6.2.Final from central in [default]
+        javax.activation#activation;1.1 from central in [default]
+        javax.servlet#servlet-api;2.5 from central in [default]
+        javax.servlet.jsp#jsp-api;2.1 from central in [default]
+        javax.xml.bind#jaxb-api;2.2.2 from central in [default]
+        javax.xml.stream#stax-api;1.0-2 from central in [default]
+        jline#jline;0.9.94 from central in [default]
+        joda-time#joda-time;2.10.13 from central in [default]
+        junit#junit;4.11 from central in [default]
+        log4j#log4j;1.2.17 from central in [default]
+        net.java.dev.jets3t#jets3t;0.9.0 from central in [default]
+        org.apache.avro#avro;1.7.6 from central in [default]
+        org.apache.commons#commons-compress;1.4.1 from central in [default]
+        org.apache.commons#commons-math3;3.1.1 from central in [default]
+        org.apache.curator#curator-client;2.7.1 from central in [default]
+        org.apache.curator#curator-framework;2.7.1 from central in [default]
+        org.apache.curator#curator-recipes;2.7.1 from central in [default]
+        org.apache.directory.api#api-asn1-api;1.0.0-M20 from central in [default]
+        org.apache.directory.api#api-util;1.0.0-M20 from central in [default]
+        org.apache.directory.server#apacheds-i18n;2.0.0-M15 from central in [default]
+        org.apache.directory.server#apacheds-kerberos-codec;2.0.0-M15 from central in [default]
+        org.apache.hadoop#hadoop-annotations;2.7.1 from central in [default]
+        org.apache.hadoop#hadoop-auth;2.7.1 from central in [default]
+        org.apache.hadoop#hadoop-aws;2.7.1 from central in [default]
+        org.apache.hadoop#hadoop-common;2.7.1 from central in [default]
+        org.apache.htrace#htrace-core;3.1.0-incubating from central in [default]
+        org.apache.httpcomponents#httpclient;4.2.5 from central in [default]
+        org.apache.httpcomponents#httpcore;4.2.5 from central in [default]
+        org.apache.zookeeper#zookeeper;3.4.6 from central in [default]
+        org.codehaus.jackson#jackson-core-asl;1.9.13 from central in [default]
+        org.codehaus.jackson#jackson-jaxrs;1.9.13 from central in [default]
+        org.codehaus.jackson#jackson-mapper-asl;1.9.13 from central in [default]
+        org.codehaus.jackson#jackson-xc;1.9.13 from central in [default]
+        org.codehaus.jettison#jettison;1.1 from central in [default]
+        org.hamcrest#hamcrest-core;1.3 from central in [default]
+        org.mortbay.jetty#jetty;6.1.26 from central in [default]
+        org.mortbay.jetty#jetty-util;6.1.26 from central in [default]
+        org.slf4j#slf4j-api;1.7.10 from central in [default]
+        org.slf4j#slf4j-log4j12;1.7.10 from central in [default]
+        org.tukaani#xz;1.0 from central in [default]
+        org.xerial.snappy#snappy-java;1.0.5 from central in [default]
+        xmlenc#xmlenc;0.52 from central in [default]
+        :: evicted modules:
+        org.slf4j#slf4j-api;1.7.5 by [org.slf4j#slf4j-api;1.7.10] in [default]
+        org.slf4j#slf4j-api;1.6.4 by [org.slf4j#slf4j-api;1.7.5] in [default]
+        org.apache.avro#avro;1.7.4 by [org.apache.avro#avro;1.7.6] in [default]
+        ---------------------------------------------------------------------
+        |                  |            modules            ||   artifacts   |
+        |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+        ---------------------------------------------------------------------
+        |      default     |   74  |   1   |   0   |   3   ||   71  |   0   |
+        ---------------------------------------------------------------------
+
+:: problems summary ::
+:::: ERRORS
+        SERVER ERROR: Bad Gateway url=https://dl.bintray.com/spark-packages/maven/joda-time/joda-time/maven-metadata.xml
+
+        SERVER ERROR: Bad Gateway url=https://dl.bintray.com/spark-packages/maven/joda-time/joda-time/
+
+        SERVER ERROR: Bad Gateway url=https://dl.bintray.com/spark-packages/maven/joda-time/joda-time/
+
+
+:: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+:: retrieving :: org.apache.spark#spark-submit-parent-66edf56f-b9b4-49cc-86f4-6be81b9b16a5
+        confs: [default]
+        0 artifacts copied, 71 already retrieved (0kB/21ms)
+22/03/08 08:05:37 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /__ / .__/\_,_/_/ /_/\_\   version 2.4.6
+      /_/
+
+Using Python version 3.6.3 (default, Oct 13 2017 12:02:49)
+SparkSession available as 'spark'.
+>>> from pyspark import SparkContext, SparkConf, HiveContext
+>>> from pyspark.sql.functions import *
+>>> from pyspark.sql.types import *
+>>> import pyspark.sql.functions as F
+>>> import pyspark.sql.types as T
+>>> import csv
+>>> import pandas as pd
+>>> import numpy as np
+>>> import sys
+>>> from pyspark.sql import Window
+>>> from pyspark.sql.functions import rank, col
+>>> import geohash2 as geohash
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'geohash2'
+>>> import pygeohash as pgh
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'pygeohash'
+>>> from functools import reduce
+>>> from pyspark.sql import *
+>>> 
+>>> df=spark.read.parquet('s3a://ada-prod-data/etl/data/brq/agg/agg_brq/monthly/BD/2022{02}/*.parquet')
+>>>                                                                             
+>>> 
+>>> df.show()
++--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+-------------+---------+
+|                 ifa|              device|          connection|                 app|             maxmind|                 gps|         user|brq_count|
++--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+-------------+---------+
+|0000e38d-24bd-40d...|[Symphony, Sympho...|[[Cable/DSL, Disc...|[[com.imo.android...|[[wh0r0dy4m, 3, 2...|[[wh0rwm0z9, 1, 2...|    [, 0, -1]|        3|
+|00010c6f-ae31-469...|[Lenovo, Lenovo T...|[[Cable/DSL, M/S....|[[com.digidust.el...|[[wh1494p8r, 39, ...|[[wh0de0t0k, 1, 2...|    [, 0, -1]|       65|
+|0002290e-5b3f-4cb...|[Xiaomi, Xiaomi P...|[[Cellular, Robi,...|[[com.juttdevelop...|[[w5cqd9ztt, 91, ...|[[w5cr1shed, 19, ...|    [, 0, -1]|      426|
+|00025d90-652d-48e...|[ZTE, ZTE Maven 2...|[[Cable/DSL, Mahf...|[[com.imo.android...|[[wh0r36gpq, 190,...|[[wh0r46uy8, 1, 2...|    [, 0, -1]|      190|
+|0003004e-3c43-4d3...|[Tecno, Tecno Spa...|[[Cable/DSL, Cybe...|[[com.playit.vide...|[[wh0r0rf23, 1, 2...|[[wh20ntmbk, 1, 2...|    [, 0, -1]|       73|
+|0003100b-b154-49c...|[Samsung, Samsung...|[[Cable/DSL, BKB ...|[[com.UCMobile.in...|[[wh0pxkgd4, 3, 2...|[[wh0qtd22w, 1, 2...|    [, 0, -1]|        3|
+|00033f79-98c2-4c1...|[Lava, Lava Z90, ...|[[Cellular, Grame...|[[com.playit.vide...|[[wh0r0dy4m, 1, 2...|                null|    [, 0, -1]|        1|
+|00036525-91dd-462...|[Symphony, Sympho...|[[Cellular, TELEN...|[[com.imo.android...|[[wh0r0dy4m, 2, 2...|                null|    [, 0, -1]|       39|
+|00038573-4bae-40c...|[Huawei, Huawei Y...|[[Cellular, TELEN...|[[com.mxtech.vide...|[[wh0qbdb2z, 19, ...|[[wh0qcr6hc, 1, 2...|    [, 0, -1]|       20|
+|000424e1-eba1-483...|[Symphony, Sympho...|[[Cellular, Grame...|[[com.imo.android...|[[wh0qcr6hc, 92, ...|[[wh0r3rf6b, 12, ...|    [, 0, -1]|      293|
+|00043784-578e-49a...|[Huawei, Huawei Y...|[[Cellular, Robi,...|[[com.lenovo.anys...|[[wh0qbdb2z, 13, ...|[[wh0efpqtc, 6, 2...|    [, 0, -1]|       13|
+|00046ec3-6ea3-42e...|[Samsung, Samsung...|[[Cellular, Grame...|[[com.imo.android...|[[wh0r36gpq, 8, 2...|[[wh0pyyf7w, 10, ...|    [, 0, -1]|      141|
+|000470bc-5fd0-48b...|[Samsung, Samsung...|[[Cellular, Robi,...|[[com.lenovo.anys...|[[wh0r0kpj8, 179,...|[[wh0qcr6hc, 2, 2...|[F, 1966, 56]|     1025|
+|00048a53-511e-459...|[Huawei, Huawei H...|[[Cable/DSL, Skyn...|[[com.mxtech.vide...|[[wh0r0dy4m, 9, 2...|[[w5bpqvf3q, 5, 2...| [, 1996, 26]|      201|
+|0004c5dc-b62b-4a6...|[Symphony, Sympho...|[[Cellular, Robi,...|[[com.appsomniacs...|[[wh0ub55k7, 18, ...|                null|    [, 0, -1]|       28|
+|00054225-05dc-4bc...|[Xiaomi, Xiaomi R...|[[Cable/DSL, S.M....|[[com.camerasidea...|[[wh033gvm8, 14, ...|[[wh030ms1d, 10, ...|    [, 0, -1]|       14|
+|000542b8-b5f5-47d...|[Vivo, Vivo Y12s,...|[[Cellular, Grame...|[[com.mxtech.vide...|[[wh0qcr6hc, 30, ...|[[wh0ub55k7, 2, 2...|    [, 0, -1]|      109|
+|00057405-6337-434...|[Samsung, Samsung...|[[Cable/DSL, Digi...|[[com.imo.android...|[[w5cqd9ztt, 37, ...|[[wh10s6jnd, 8, 2...|[F, 1965, 57]|      657|
+|0005aac9-e0e1-43a...|[Symphony, Sympho...|[[Cable/DSL, HK O...|[[com.imo.android...|[[wh0r36gpq, 30, ...|[[turuu6dez, 1, 2...|      [,, -1]|       40|
+|0005b534-fbf7-45c...|[OPPO, OPPO A15s,...|[[Cellular, TELEN...|[[com.rahul.video...|[[wh0r0dy4m, 2, 2...|[[turcttrpj, 8, 2...| [, 2003, 19]|      111|
++--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+-------------+---------+
+only showing top 20 rows
+
+>>> 
+>>> 
+>>> df.printSchema()
+root
+ |-- ifa: string (nullable = true)
+ |-- device: struct (nullable = true)
+ |    |-- device_vendor: string (nullable = true)
+ |    |-- device_name: string (nullable = true)
+ |    |-- device_manufacturer: string (nullable = true)
+ |    |-- device_model: string (nullable = true)
+ |    |-- device_year_of_release: string (nullable = true)
+ |    |-- platform: string (nullable = true)
+ |    |-- major_os: string (nullable = true)
+ |    |-- device_category: string (nullable = true)
+ |-- connection: array (nullable = true)
+ |    |-- element: struct (containsNull = true)
+ |    |    |-- mm_con_type_desc: string (nullable = true)
+ |    |    |-- mm_carrier_name: string (nullable = true)
+ |    |    |-- req_con_type: integer (nullable = true)
+ |    |    |-- req_carrier_mnc: string (nullable = true)
+ |    |    |-- req_carrier_name: string (nullable = true)
+ |    |    |-- req_carrier_code: string (nullable = true)
+ |    |    |-- req_carrier_mcc: string (nullable = true)
+ |    |    |-- brq_count: long (nullable = true)
+ |    |    |-- first_seen: timestamp (nullable = true)
+ |    |    |-- last_seen: timestamp (nullable = true)
+ |    |    |-- user_agent: string (nullable = true)
+ |    |    |-- req_con_type_desc: string (nullable = true)
+ |    |    |-- ndays: long (nullable = true)
+ |-- app: array (nullable = true)
+ |    |-- element: struct (containsNull = true)
+ |    |    |-- bundle: string (nullable = true)
+ |    |    |-- brq_count: long (nullable = true)
+ |    |    |-- first_seen: timestamp (nullable = true)
+ |    |    |-- last_seen: timestamp (nullable = true)
+ |    |    |-- platform: string (nullable = true)
+ |    |    |-- asn: string (nullable = true)
+ |    |    |-- ndays: long (nullable = true)
+ |-- maxmind: array (nullable = true)
+ |    |-- element: struct (containsNull = true)
+ |    |    |-- geohash: string (nullable = true)
+ |    |    |-- brq_count: long (nullable = true)
+ |    |    |-- first_seen: timestamp (nullable = true)
+ |    |    |-- last_seen: timestamp (nullable = true)
+ |    |    |-- longitude: float (nullable = true)
+ |    |    |-- state_name: string (nullable = true)
+ |    |    |-- city: string (nullable = true)
+ |    |    |-- state: string (nullable = true)
+ |    |    |-- latitude: float (nullable = true)
+ |    |    |-- country: string (nullable = true)
+ |    |    |-- ndays: long (nullable = true)
+ |-- gps: array (nullable = true)
+ |    |-- element: struct (containsNull = true)
+ |    |    |-- geohash: string (nullable = true)
+ |    |    |-- brq_count: long (nullable = true)
+ |    |    |-- first_seen: timestamp (nullable = true)
+ |    |    |-- last_seen: timestamp (nullable = true)
+ |    |    |-- longitude: float (nullable = true)
+ |    |    |-- state_name: string (nullable = true)
+ |    |    |-- city: string (nullable = true)
+ |    |    |-- state: string (nullable = true)
+ |    |    |-- latitude: float (nullable = true)
+ |    |    |-- country: string (nullable = true)
+ |    |    |-- ndays: long (nullable = true)
+ |-- user: struct (nullable = true)
+ |    |-- gender: string (nullable = true)
+ |    |-- yob: integer (nullable = true)
+ |    |-- age: integer (nullable = true)
+ |-- brq_count: long (nullable = true)
+
+>>> 
+>>> 
+>>> df.printSchema()
+root
+ |-- ifa: string (nullable = true)
+ |-- device: struct (nullable = true)
+ |    |-- device_vendor: string (nullable = true)
+ |    |-- device_name: string (nullable = true)
+ |    |-- device_manufacturer: string (nullable = true)
+ |    |-- device_model: string (nullable = true)
+ |    |-- device_year_of_release: string (nullable = true)
+ |    |-- platform: string (nullable = true)
+ |    |-- major_os: string (nullable = true)
+ |    |-- device_category: string (nullable = true)
+ |-- connection: array (nullable = true)
+ |    |-- element: struct (containsNull = true)
+ |    |    |-- mm_con_type_desc: string (nullable = true)
+ |    |    |-- mm_carrier_name: string (nullable = true)
+ |    |    |-- req_con_type: integer (nullable = true)
+ |    |    |-- req_carrier_mnc: string (nullable = true)
+ |    |    |-- req_carrier_name: string (nullable = true)
+ |    |    |-- req_carrier_code: string (nullable = true)
+ |    |    |-- req_carrier_mcc: string (nullable = true)
+ |    |    |-- brq_count: long (nullable = true)
+ |    |    |-- first_seen: timestamp (nullable = true)
+ |    |    |-- last_seen: timestamp (nullable = true)
+ |    |    |-- user_agent: string (nullable = true)
+ |    |    |-- req_con_type_desc: string (nullable = true)
+ |    |    |-- ndays: long (nullable = true)
+ |-- app: array (nullable = true)
+ |    |-- element: struct (containsNull = true)
+ |    |    |-- bundle: string (nullable = true)
+ |    |    |-- brq_count: long (nullable = true)
+ |    |    |-- first_seen: timestamp (nullable = true)
+ |    |    |-- last_seen: timestamp (nullable = true)
+ |    |    |-- platform: string (nullable = true)
+ |    |    |-- asn: string (nullable = true)
+ |    |    |-- ndays: long (nullable = true)
+ |-- maxmind: array (nullable = true)
+ |    |-- element: struct (containsNull = true)
+ |    |    |-- geohash: string (nullable = true)
+ |    |    |-- brq_count: long (nullable = true)
+ |    |    |-- first_seen: timestamp (nullable = true)
+ |    |    |-- last_seen: timestamp (nullable = true)
+ |    |    |-- longitude: float (nullable = true)
+ |    |    |-- state_name: string (nullable = true)
+ |    |    |-- city: string (nullable = true)
+ |    |    |-- state: string (nullable = true)
+ |    |    |-- latitude: float (nullable = true)
+ |    |    |-- country: string (nullable = true)
+ |    |    |-- ndays: long (nullable = true)
+ |-- gps: array (nullable = true)
+ |    |-- element: struct (containsNull = true)
+ |    |    |-- geohash: string (nullable = true)
+ |    |    |-- brq_count: long (nullable = true)
+ |    |    |-- first_seen: timestamp (nullable = true)
+ |    |    |-- last_seen: timestamp (nullable = true)
+ |    |    |-- longitude: float (nullable = true)
+ |    |    |-- state_name: string (nullable = true)
+ |    |    |-- city: string (nullable = true)
+ |    |    |-- state: string (nullable = true)
+ |    |    |-- latitude: float (nullable = true)
+ |    |    |-- country: string (nullable = true)
+ |    |    |-- ndays: long (nullable = true)
+ |-- user: struct (nullable = true)
+ |    |-- gender: string (nullable = true)
+ |    |-- yob: integer (nullable = true)
+ |    |-- age: integer (nullable = true)
+ |-- brq_count: long (nullable = true)
+
+>>> 
+>>> df2=df.select('ifa','device.device_vendor','device.device_model','device.major_os',F.explode('gps.geohash').alias('geohash'))
+>>> 
+>>> 
+>>> df2=df2.withColumnRenamed("device.device_vendor","Vendor")
+>>> 
+>>> 
+>>> df2=df2.withColumnRenamed("device.device_model","Model")
+>>> 
+>>> 
+>>> df2=df2.withColumnRenamed("device.major_os","OS")
+>>> 
+>>> 
+>>> df2=df2.withColumn("geohash_new", substring(col("geohash"),1,6))
+>>> 
+>>> 
+>>> df2=df2.drop('geohash')
+>>> 
+>>> 
+>>> df2=df2.withColumnRenamed("geohash_new","geohash")
+>>> 
+>>> 
+>>> 
+>>> 
+>>> df2.printSchema()
+root
+ |-- ifa: string (nullable = true)
+ |-- Vendor: string (nullable = true)
+ |-- Model: string (nullable = true)
+ |-- OS: string (nullable = true)
+ |-- geohash: string (nullable = true)
+
+>>> 
+>>> pabna=spark.read.csv('s3a://ada-bd-emr/muntasir/place/pabna.csv',header=True)
+>>> 
+>>> 
+>>> gulshan=spark.read.csv('s3a://ada-bd-emr/muntasir/place/gulshan.csv',header=True)
+>>> 
+>>> 
+>>> 
+>>> pabna_ifa=df2.join(pabna,"geohash","left")
+>>> 
+>>> 
+>>> 
+>>> pabna_ifa.printSchema()
+root
+ |-- geohash: string (nullable = true)
+ |-- ifa: string (nullable = true)
+ |-- Vendor: string (nullable = true)
+ |-- Model: string (nullable = true)
+ |-- OS: string (nullable = true)
+ |-- country: string (nullable = true)
+ |-- division: string (nullable = true)
+ |-- district: string (nullable = true)
+ |-- thana: string (nullable = true)
+ |-- union: string (nullable = true)
+
+>>> vendor=pabna_ifa.groupBy("Vendor").agg(F.countDistinct('ifa').alias('ifa_numbers')).sort('ifa_numbers', ascending=False)
+>>> 
+>>> model=pabna_ifa.groupBy("Model").agg(F.countDistinct('ifa').alias('ifa_numbers')).sort('ifa_numbers', ascending=False)
+>>> 
+>>> os=pabna_ifa.groupBy("OS").agg(F.countDistinct('ifa').alias('ifa_numbers')).sort('ifa_numbers', ascending=False)
+>>> 
+>>> 
+>>> vendor.show(20)
++--------+-----------+                                                          
+|  Vendor|ifa_numbers|
++--------+-----------+
+| Samsung|    8458796|
+|  Xiaomi|    5028074|
+|    Vivo|    4152894|
+|    null|    3461130|
+|    OPPO|    3021236|
+|  Realme|    2289100|
+|  Huawei|    1712281|
+|    itel|    1402212|
+|Symphony|    1363643|
+|   Tecno|     941766|
+| Generic|     743871|
+|  Walton|     665368|
+| Infinix|     559765|
+|   Apple|     397747|
+|    Lava|     259868|
+|   Nokia|     255670|
+| OnePlus|     245789|
+|  Lenovo|     140128|
+|Motorola|      59679|
+|     HTC|      39175|
++--------+-----------+
+only showing top 20 rows
+
+>>> 
+>>> model.show(20)
++------------+-----------+                                                      
+|       Model|ifa_numbers|
++------------+-----------+
+|        null|    3461130|
+|        1906|     623691|
+|       V2043|     538718|
+|      iPhone|     378410|
+|       V2111|     363279|
+|Redmi Note 8|     348203|
+|       V2026|     340112|
+|       L6502|     337351|
+|    SM-G532F|     324372|
+|     CPH2185|     295740|
+|    SM-A107F|     265088|
+|        1820|     263052|
+|     CPH2083|     262557|
+|     CPH2269|     262404|
+|       V2027|     260645|
+|       V2102|     253508|
+|    SM-G532G|     238967|
+|    SM-A105F|     238866|
+|       X688B|     232612|
+| Android 8.1|     230886|
++------------+-----------+
+only showing top 20 rows
+
+>>> 
+>>> os.show(20)
++------------+-----------+                                                      
+|          OS|ifa_numbers|
++------------+-----------+
+|Android 11.0|    9888962|
+|Android 10.0|    7968612|
+| Android 9.0|    4642968|
+|        null|    3461130|
+| Android 8.1|    3414590|
+| Android 6.0|    2059717|
+| Android 5.1|    1305961|
+| Android 7.0|     712060|
+| Android 7.1|     601092|
+| Android 8.0|     499457|
+| Android 4.4|     289249|
+|Android 12.0|     181262|
+| Android 5.0|     115691|
+|    iOS 12.0|      77848|
+|    iOS 15.2|      68251|
+|    iOS 15.3|      50879|
+|    iOS 15.1|      38474|
+|    iOS 14.8|      32392|
+| Android 4.2|      27059|
+|    iOS 14.7|      19801|
++------------+-----------+
+only showing top 20 rows
+
+>>> gulshan_ifa=df2.join(gulshan,"geohash","left")
+>>> 
+>>> 
+>>> vendor=gulshan_ifa.groupBy("Vendor").agg(F.countDistinct('ifa').alias('ifa_numbers')).sort('ifa_numbers', ascending=False)
+>>> 
+>>> model=gulshan_ifa.groupBy("Model").agg(F.countDistinct('ifa').alias('ifa_numbers')).sort('ifa_numbers', ascending=False)
+>>> 
+>>> os=gulshan_ifa.groupBy("OS").agg(F.countDistinct('ifa').alias('ifa_numbers')).sort('ifa_numbers', ascending=False)
+>>> 
+>>> 
+>>> vendor.show(20)
++--------+-----------+                                                          
+|  Vendor|ifa_numbers|
++--------+-----------+
+| Samsung|    8458796|
+|  Xiaomi|    5028074|
+|    Vivo|    4152894|
+|    null|    3461130|
+|    OPPO|    3021236|
+|  Realme|    2289100|
+|  Huawei|    1712281|
+|    itel|    1402212|
+|Symphony|    1363643|
+|   Tecno|     941766|
+| Generic|     743871|
+|  Walton|     665368|
+| Infinix|     559765|
+|   Apple|     397747|
+|    Lava|     259868|
+|   Nokia|     255670|
+| OnePlus|     245789|
+|  Lenovo|     140128|
+|Motorola|      59679|
+|     HTC|      39175|
++--------+-----------+
+only showing top 20 rows
+
+>>> 
+>>> model.show(20)
+[Stage 22:========================================>             (160 + 4) / 215]^CTraceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/ec2-user/anaconda3/lib/python3.6/site-packages/pyspark/sql/dataframe.py", line 381, in show
+    print(self._jdf.showString(n, 20, vertical))
+  File "/home/ec2-user/anaconda3/lib/python3.6/site-packages/pyspark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1255, in __call__
+  File "/home/ec2-user/anaconda3/lib/python3.6/site-packages/pyspark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 985, in send_command
+  File "/home/ec2-user/anaconda3/lib/python3.6/site-packages/pyspark/python/lib/py4j-0.10.7-src.zip/py4j/java_gateway.py", line 1152, in send_command
+  File "/home/ec2-user/anaconda3/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "/home/ec2-user/anaconda3/lib/python3.6/site-packages/pyspark/context.py", line 270, in signal_handler
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+>>> 22/03/08 08:50:22 WARN TaskSetManager: Lost task 160.0 in stage 22.0 (TID 2829, localhost, executor driver): TaskKilled (Stage cancelled)
+22/03/08 08:50:22 WARN TaskSetManager: Lost task 161.0 in stage 22.0 (TID 2830, localhost, executor driver): TaskKilled (Stage cancelled)
+22/03/08 08:50:22 WARN TaskSetManager: Lost task 162.0 in stage 22.0 (TID 2831, localhost, executor driver): TaskKilled (Stage cancelled)
+22/03/08 08:50:23 WARN TaskSetManager: Lost task 163.0 in stage 22.0 (TID 2832, localhost, executor driver): TaskKilled (Stage cancelled)
+
+Traceback (most recent call last):
+  File "/home/ec2-user/anaconda3/lib/python3.6/site-packages/pyspark/context.py", line 270, in signal_handler
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+>>> 
+Traceback (most recent call last):
+  File "/home/ec2-user/anaconda3/lib/python3.6/site-packages/pyspark/context.py", line 270, in signal_handler
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+>>> 
+Traceback (most recent call last):
+  File "/home/ec2-user/anaconda3/lib/python3.6/site-packages/pyspark/context.py", line 270, in signal_handler
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+>>> model.show(20)
++------------+-----------+                                                      
+|       Model|ifa_numbers|
++------------+-----------+
+|        null|    3461130|
+|        1906|     623691|
+|       V2043|     538718|
+|      iPhone|     378410|
+|       V2111|     363279|
+|Redmi Note 8|     348203|
+|       V2026|     340112|
+|       L6502|     337351|
+|    SM-G532F|     324372|
+|     CPH2185|     295740|
+|    SM-A107F|     265088|
+|        1820|     263052|
+|     CPH2083|     262557|
+|     CPH2269|     262404|
+|       V2027|     260645|
+|       V2102|     253508|
+|    SM-G532G|     238967|
+|    SM-A105F|     238866|
+|       X688B|     232612|
+| Android 8.1|     230886|
++------------+-----------+
+only showing top 20 rows
+
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> os.show(20)
++------------+-----------+                                                      
+|          OS|ifa_numbers|
++------------+-----------+
+|Android 11.0|    9888962|
+|Android 10.0|    7968612|
+| Android 9.0|    4642968|
+|        null|    3461130|
+| Android 8.1|    3414590|
+| Android 6.0|    2059717|
+| Android 5.1|    1305961|
+| Android 7.0|     712060|
+| Android 7.1|     601092|
+| Android 8.0|     499457|
+| Android 4.4|     289249|
+|Android 12.0|     181262|
+| Android 5.0|     115691|
+|    iOS 12.0|      77848|
+|    iOS 15.2|      68251|
+|    iOS 15.3|      50879|
+|    iOS 15.1|      38474|
+|    iOS 14.8|      32392|
+| Android 4.2|      27059|
+|    iOS 14.7|      19801|
++------------+-----------+
+only showing top 20 rows
